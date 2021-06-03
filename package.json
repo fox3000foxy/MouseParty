@@ -1,0 +1,22 @@
+{
+  "name": "realtime-multi-user-cursor",
+  "version": "1.0.0",
+  "description": "Displaying cursor on every connected client",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Ping Lu",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^13.0.1",
+    "express": "^4.17.1",
+    "opentok-screen-sharing": "^1.0.34",
+    "screenshot-desktop": "^1.12.4",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

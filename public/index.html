@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Displaying cursor on every connected client</title>
+  </head>
+  <body>
+	  		  <iframe title="screenShare" src="screen" id="sharingScreen" frameborder=0 style="position:absolute;left:0;top:0;width:100%;height:100%"></iframe>
+			  <script>
+				if(location.href.split("username=")[1]=="server") {
+				document.getElementById("sharingScreen").style.display = "none"
+				}
+
+				setInterval(()=>{
+					document.getElementById("sharingScreen").src="screen"
+				},500)
+			  </script>
+    <header class="cursor-header">
+      <ul class="users"></ul>
+      <!-- <a href="index.html" class="btn">Leave</a> -->
+    </header>
+    <main class="cursor-container">	</main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

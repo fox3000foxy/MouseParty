@@ -1,0 +1,128 @@
+:root {
+  --dark-color-a: #667aff;
+  --dark-color-b: #7386ff;
+  --middle-color: #bac0f0;
+  --light-color: #e6e9ff;
+  --light-grey: #eff2f3;
+  --drop-shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*body {
+  background-color: var(--light-color);
+}*/
+
+.btn {
+  padding: 8px 16px;
+  background-color: var(--light-color);
+  color: var(--dark-color-a);
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 2px 4px var(--middle-color), 1px 1px var(--middle-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 2px var(--middle-color);
+}
+
+/* Cursor page */
+.cursor-header {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  background-color: transparent;
+}
+
+.users {
+  display: none;
+  list-style: none;
+  padding: 4px;
+  margin: 4px 24px 0 0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 4px;
+  color: white;
+  border-radius: 50%;
+}
+
+.cursor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: var(--light-grey);*/
+}
+
+.cursor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+}
+
+.cursor .cursor-icon {
+  width: 14px;
+  height: 16px;
+  -webkit-filter: drop-shadow(1px 2px 1px var(--drop-shadow));
+  filter: drop-shadow(1px 2px 1px var(--drop-shadow));
+}
+
+.cursor .username {
+  text-align: center;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 2px 4px;
+  color: white;
+  font-size: 8px;
+}
+
+/* Join page */
+.join-container {
+  max-width: 500px;
+  margin: 80px auto;
+  background-color: var(--dark-color-b);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.join-container .form-control {
+  color: white;
+  font-size: 18px;
+}
+
+.join-container .form-control input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 8px 0 24px;
+  padding: 8px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.join-container .form-control .btn {
+  width: 100%;
+}
